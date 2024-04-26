@@ -1,6 +1,5 @@
 name: CI
 
-# Controls when the workflow will run
 on:
   push:
     branches: [ "main" ]
@@ -13,23 +12,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # Sets up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'  # Specify the Python version you need
+          python-version: '3.9'
 
-      # Install flake8
-      - name: Install flake8
-        run: python -m pip install flake8
+      - name: Install dependencies
+        run: |
+          python -m pip install flake8 isort autoflake
+          python -m pip install check-jsonschema
+          python -m pip install pygrep-hooks
 
-      # Run flake8
       - name: Lint with flake8
         run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # The options:
-        # --count: Print the total number of errors.
-        # --select: Comma-separated list of error codes to check.
-        # --show-source: Show the source code for each error.
-        # --statistics: Print statistics about errors.
+
+      - name: Check import order with isort
+        run: isort . --check-only
+
+      - name: Remove unused variables and imports with autoflake
+        run: autoflake --remove-all-unused-imports --remove-unused-variables --in-place --recursive .
+
+      - name: Validate JSON schemas
+        run: check-jsonschema -d path/to/json/directory -s path/to/schema/file.json
+
+      - name: Check for debugging statements
+        run: pygrep-hooks --hook-id forbid-debug-statements .
