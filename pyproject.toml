@@ -9,6 +9,7 @@ packages = [{include = "studcamp_yandex_hse"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+pre-commit = "^3.7.0"
 
 [build-system]
 requires = ["poetry-core"]
