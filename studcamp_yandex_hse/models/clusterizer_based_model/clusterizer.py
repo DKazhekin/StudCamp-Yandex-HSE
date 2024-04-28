@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.cluster import DBSCAN
 
 from studcamp_yandex_hse.models.base_extractor import BaseExtractor
-from studcamp_yandex_hse.models.clusterizer_based_model import FaissKeywordExtractor
+from studcamp_yandex_hse.models.clusterizer_based_model.faiss import FaissKeywordExtractor
 from studcamp_yandex_hse.processing.embedder import FastTextEmbedder
 from studcamp_yandex_hse.processing.normalizers import NormalizersPipe, NounsKeeper, PunctDeleter, StopwordsDeleter
 

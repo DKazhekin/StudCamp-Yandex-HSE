@@ -19,6 +19,8 @@ rake-nltk = "^1.0.6"
 sentencepiece = "^0.2.0"
 faiss-cpu = "^1.8.0"
 pre-commit = "^3.7.0"
+accelerate = "^0.29.3"
+peft = "^0.10.0"
 
 [build-system]
 requires = ["poetry-core"]
