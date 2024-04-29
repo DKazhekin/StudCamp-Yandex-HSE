@@ -15,15 +15,15 @@ def main():
     destination_path = "cc.ru.300.bin"
     gdown.download(file_url, destination_path, quiet=False)
 
-    st.title("Hello World!")
-
-    input_text = st.text_input("Your text is here")
-    if st.button("Submit"):
-        if type(input_text) is str:
-            st.write(RakeBasedTagger().extract(input_text, 5))
-            st.balloons()
-        else:
-            st.error("You need to input a text in the field above")
+    # st.title("Hello World!")
+    #
+    # input_text = st.text_input("Your text is here")
+    # if st.button("Submit"):
+    #     if type(input_text) is str:
+    #         st.write(RakeBasedTagger().extract(input_text, 5))
+    #         st.balloons()
+    #     else:
+    #         st.error("You need to input a text in the field above")
 
 
 if __name__ == "__main__":
