@@ -20,7 +20,7 @@ def main():
     input_text = st.text_input("Your text is here")
     if st.button("Submit"):
         if type(input_text) is str:
-            st.write(RakeBasedTagger().extract(text, 5))
+            st.write(RakeBasedTagger().extract(input_text, 5))
             st.balloons()
         else:
             st.error("You need to input a text in the field above")
