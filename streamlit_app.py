@@ -2,6 +2,8 @@ import streamlit as st
 
 from studcamp_yandex_hse.models import RakeBasedTagger
 
+subprocess.run(["dvc", "pull", "cc.ru.300.bin.dvc"], check=True)
+
 st.set_page_config(
     page_title="Text Tagger",
     layout="centered",
