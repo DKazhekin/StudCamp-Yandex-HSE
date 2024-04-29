@@ -1,8 +1,8 @@
+import subprocess
+
 import streamlit as st
 
 from studcamp_yandex_hse.models import RakeBasedTagger
-
-subprocess.run(["dvc", "pull", "cc.ru.300.bin.dvc"], check=True)
 
 st.set_page_config(
     page_title="Text Tagger",
@@ -12,6 +12,7 @@ st.set_page_config(
 
 
 def main():
+    subprocess.run(["dvc", "pull", "cc.ru.300.bin.dvc"], check=True)
     st.title("Hello World!")
 
     text = """С 1 по 13 апреля в Москве на базе факультета компьютерных наук НИУ ВШЭ пройдет бесплатный студкемп по машинному обучению, организованный в рамках программы «Яндекса» для студентов IT-специальностей. За две недели студенты изучат материал, на освоение которого в рамках традиционных программ уходит от пары месяцев до нескольких семестров. Они получат фундаментальные знания в области искусственного интеллекта, а также познакомятся с практиками применения нейросетей в сервисах «Яндекса».
