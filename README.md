@@ -37,6 +37,8 @@ Here're some of the project's best features:
 
 <h2>🛠️ Installation Steps:</h2>
 
+#### Please, use python@3.10
+
 <p>1. Installation</p>
 
 ```
