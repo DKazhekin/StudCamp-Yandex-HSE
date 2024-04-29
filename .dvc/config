@@ -1,2 +1,4 @@
+[core]
+    hardlink_lock = true
 ['remote "cloud_remote"']
     url = gdrive://1Sz-xSYglhDCCJQJctnJQfUXiOjKDzctf
