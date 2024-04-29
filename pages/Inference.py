@@ -53,7 +53,7 @@ def main():
                     st.write("Pass")
             with col5:
                 with st.expander("RuT5Based Tags"):
-                    st.write(Rut5BasedTagger().extract(text))
+                    st.write(Rut5BasedTagger().extract(input_text))
 
             st.balloons()
 
