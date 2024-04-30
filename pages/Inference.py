@@ -40,13 +40,13 @@ def main():
                     st.write(",".join(RakeBasedTagger().extract(input_text, 5)))
             with col2:
                 with st.expander("BartBased Tags"):
-                    st.write(",".join(BartBasedTagger().extract(text, 5)))
+                    st.write(",".join(BartBasedTagger().extract(input_text, 5)))
             with col3:
                 with st.expander("ClusterizedBased Tags"):
-                    st.write(",".join(DBSCANFaissTagger().extract(text, 5)))
+                    st.write(",".join(DBSCANFaissTagger().extract(input_text, 5)))
             with col4:
                 with st.expander("AttentionBased Tags"):
-                    st.write(",".join(AttentionBasedTagger().extract(text, 5)))
+                    st.write(",".join(AttentionBasedTagger().extract(input_text, 5)))
             with col5:
                 with st.expander("RuT5Based Tags"):
                     st.write(",".join(Rut5BasedTagger().extract(input_text)))
