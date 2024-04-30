@@ -20,6 +20,7 @@ st.set_page_config(
 def load_data():
     url_bin = "https://drive.google.com/uc?id=1EppNyj2zfwHuSnZWTRtAPfDGJArSq-m8"
     url_weights = "https://drive.google.com/drive/u/0/folders/11cnQXsSJUteyUfuv4F7NStyR7PVHWEzy"
+    output = "./"
     gdown.download(url_bin, output)
     gdown.download_folder(url_weights)
 
