@@ -20,7 +20,7 @@ st.set_page_config(
 def load_data():
     url_bin = "https://drive.google.com/uc?id=1EppNyj2zfwHuSnZWTRtAPfDGJArSq-m8"
     url_weights = "https://drive.google.com/drive/u/0/folders/11cnQXsSJUteyUfuv4F7NStyR7PVHWEzy"
-    # gdown.download(url_bin, output)
+    gdown.download(url_bin, output)
     gdown.download_folder(url_weights)
 
 
@@ -36,23 +36,19 @@ def main():
 
             with col1:
                 with st.expander("RakeBased Tags"):
-                    # st.write(RakeBasedTagger().extract(input_text, 5))
-                    st.write("Pass")
+                    st.write(",".join(RakeBasedTagger().extract(input_text, 5)))
             with col2:
                 with st.expander("BartBased Tags"):
-                    # st.write(BartBasedTagger().extract(text, 5))
-                    st.write("Pass")
+                    st.write(",".join(BartBasedTagger().extract(text, 5)))
             with col3:
                 with st.expander("ClusterizedBased Tags"):
-                    # st.write(DBSCANFaissTagger().extract(text, 5))
-                    st.write("Pass")
+                    st.write(",".join(DBSCANFaissTagger().extract(text, 5)))
             with col4:
                 with st.expander("AttentionBased Tags"):
-                    # st.write(AttentionBasedTagger().extract(text, 5))
-                    st.write("Pass")
+                    st.write(",".join(AttentionBasedTagger().extract(text, 5)))
             with col5:
                 with st.expander("RuT5Based Tags"):
-                    st.write(Rut5BasedTagger().extract(input_text))
+                    st.write(",".join(Rut5BasedTagger().extract(input_text)))
 
             st.balloons()
 
