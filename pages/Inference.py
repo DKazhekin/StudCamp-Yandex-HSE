@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 
-@st.cache
+@st.cache_data
 def load_data():
     url_bin = "https://drive.google.com/uc?id=1EppNyj2zfwHuSnZWTRtAPfDGJArSq-m8"
     url_weights = "https://drive.google.com/drive/u/0/folders/11cnQXsSJUteyUfuv4F7NStyR7PVHWEzy"
@@ -27,7 +27,7 @@ def load_data():
 def main():
     st.title("🔮 Inference section")
 
-    st.progress(load_data())
+    load_data()
 
     input_text = st.text_area("", placeholder="Your text is here")
     if st.button("Proceed"):
