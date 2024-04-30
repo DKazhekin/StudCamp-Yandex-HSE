@@ -508,22 +508,6 @@ files = [
 ]
 
 [[package]]
-name = "chakin"
-version = "0.0.8"
-description = "Downloader for pre-trained word vectors"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "chakin-0.0.8-py3-none-any.whl", hash = "sha256:5a6d58aff57a3a7be62d31ca517042e271a51beeacdb90b076fd282c4cb729cf"},
-]
-
-[package.dependencies]
-pandas = ">=0.20.1"
-progressbar2 = ">=3.20.0"
-six = ">=1.10.0"
-
-[[package]]
 name = "charset-normalizer"
 version = "3.3.2"
 description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
@@ -2796,25 +2780,6 @@ pyyaml = ">=5.1"
 virtualenv = ">=20.10.0"
 
 [[package]]
-name = "progressbar2"
-version = "4.4.2"
-description = "A Python Progressbar library to provide visual (yet text based) progress to long running operations."
-category = "main"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "progressbar2-4.4.2-py3-none-any.whl", hash = "sha256:ec157391635b008b8a422326fb05c27045ffbb2dc8dab5e4d90d4d412c4ffd39"},
-    {file = "progressbar2-4.4.2.tar.gz", hash = "sha256:3fda2e0c60693600a6585a784c9d3bc4e1dac57e99e133f8c0f5c8cf3df374a2"},
-]
-
-[package.dependencies]
-python-utils = ">=3.8.1"
-
-[package.extras]
-docs = ["sphinx (>=1.8.5)", "sphinx-autodoc-typehints (>=1.6.0)"]
-tests = ["dill (>=0.3.6)", "flake8 (>=3.7.7)", "freezegun (>=0.3.11)", "pytest (>=4.6.9)", "pytest-cov (>=2.6.1)", "pytest-mypy", "pywin32", "sphinx (>=1.8.5)"]
-
-[[package]]
 name = "prompt-toolkit"
 version = "3.0.43"
 description = "Library for building powerful interactive command lines in Python"
@@ -3337,26 +3302,6 @@ files = [
 
 [package.dependencies]
 six = ">=1.5"
-
-[[package]]
-name = "python-utils"
-version = "3.8.2"
-description = "Python Utils is a module with some convenient utilities not included with the standard Python install"
-category = "main"
-optional = false
-python-versions = ">3.8.0"
-files = [
-    {file = "python-utils-3.8.2.tar.gz", hash = "sha256:c5d161e4ca58ce3f8c540f035e018850b261a41e7cb98f6ccf8e1deb7174a1f1"},
-    {file = "python_utils-3.8.2-py2.py3-none-any.whl", hash = "sha256:ad0ccdbd6f856d015cace07f74828b9840b5c4072d9e868a7f6a14fd195555a8"},
-]
-
-[package.dependencies]
-typing-extensions = ">3.10.0.2"
-
-[package.extras]
-docs = ["mock", "python-utils", "sphinx"]
-loguru = ["loguru"]
-tests = ["flake8", "loguru", "pytest", "pytest-asyncio", "pytest-cov", "pytest-mypy", "sphinx", "types-setuptools"]
 
 [[package]]
 name = "pytz"
@@ -5013,4 +4958,4 @@ test = ["zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.12"
-content-hash = "16fa5c30e308d1b471c7b78d15ffdde09b62507ff9d2d63e5a8de4cadd066daa"
+content-hash = "94180f01cd7387a7eabc7cdc48c280d0b6689aeaddd95de07c866aca2189ef6b"

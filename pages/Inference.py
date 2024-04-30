@@ -1,4 +1,4 @@
-import chakin
+import fasttext.util
 import gdown
 import streamlit as st
 
@@ -20,7 +20,7 @@ st.set_page_config(
 
 @st.cache_data(show_spinner="Loading data")
 def load_data():
-    chakin.download(number=9, save_dir="./")
+    fasttext.util.download_model("ru", if_exists="ignore")
     url_weights = "https://drive.google.com/drive/u/0/folders/11cnQXsSJUteyUfuv4F7NStyR7PVHWEzy"
     gdown.download_folder(url_weights)
 
