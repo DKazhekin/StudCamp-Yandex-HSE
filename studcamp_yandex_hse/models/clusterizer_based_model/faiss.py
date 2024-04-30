@@ -8,10 +8,10 @@ class FaissKeywordExtractor:
     A class for extracting tags in a faster way using Faiss library.
     """
 
-    def __init__(self) -> None:
-        self.emb_model = fasttext.load_model("./cc.ru.300.bin")
-        self.word_vectors = np.array([self.emb_model[word] for word in self.emb_model.get_words()])
-        self.words = list(self.emb_model.get_words())
+    def __init__(self, ft_emb_model) -> None:
+        self.emb_model = ft_emb_model
+        self.word_vectors = np.array([self.emb_model.ft_model[word] for word in self.emb_model.ft_model.get_words()])
+        self.words = list(self.emb_model.ft_model.get_words())
         self.index = faiss.IndexFlatL2(self.word_vectors.shape[1])
         self.index.add(self.word_vectors.astype(np.float32))
 

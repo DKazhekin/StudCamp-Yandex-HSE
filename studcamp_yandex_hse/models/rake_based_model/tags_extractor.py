@@ -15,8 +15,8 @@ class TagsExtractor(BaseExtractor):
     A class used to extract tags from text based on keyword extraction, normalization, and ranking.
 
     Args:
+        ft_emb_model (FastTextEmbedder): FastText model used for word embeddings.
         language (str): Language used for text processing. Defaults to 'russian'.
-        fasttext_model_path (str): Path to the FastText model used for word embeddings.
         min_cnt_keyword (int): Minimum count for a keyword to be included in the tag results.
 
     Attributes:
@@ -34,8 +34,8 @@ class TagsExtractor(BaseExtractor):
 
     def __init__(
         self,
+        ft_emb_model: FastTextEmbedder,
         language: str = "russian",
-        fasttext_model_path: str = "cc.ru.300.bin",
         min_cnt_keyword: int = 2,
     ) -> None:
         self.extractor = RakeKeyphrasesExtractor(language=language)
@@ -47,8 +47,7 @@ class TagsExtractor(BaseExtractor):
             ],
             final_split=True,
         )
-        embedder = FastTextEmbedder(fasttext_model_path)
-        self.ranker = MaxDistanceRanker(embedder)
+        self.ranker = MaxDistanceRanker(ft_emb_model)
         self.min_cnt_keyword = min_cnt_keyword
 
     def extract(

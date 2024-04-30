@@ -8,7 +8,7 @@
 
 <h2>🚀 Demo</h2>
 
-<p align="center"> Streamlit  </p>
+![Streamlit Demo](./materials/streamlit-Info-2024-04-30-15-04-49.gif)
 
 <h2>🧪 Preprocessing</h2>
 
@@ -56,15 +56,22 @@ Weights: https://drive.google.com/file/d/1aqVtoNRX3xDokthxuBNFwfcXQfkKeAMa/view?
 
 ```
 from studcamp_yandex_hse.models import RakeBasedTagger, BartBasedTagger, AttentionBasedTagger, ClusterizationBasedTagger, RuT5Tagger
+from studcamp_yandex_hse.processing.embedder import FastTextEmbedder
 ```
 
-<p>3. Init tagger</p>
+<p>4. Init FastTextEmbedder (We need to pass the instance as argument for Rake and Clusterized models)</p>
 
 ```
-tagger = RakeBasedTagger()
+ft_emb_model = FastTextEmbedder()
 ```
 
-<p>4. Get tags</p>
+<p>5. Init Model</p>
+
+```
+tagger = RakeBasedTagger(ft_emb_model)
+```
+
+<p>6. Get tags</p>
 
 ```
 text = '...'

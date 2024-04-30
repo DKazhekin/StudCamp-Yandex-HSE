@@ -12,7 +12,7 @@ class DBSCANFaissTagger(BaseExtractor):
     A class for extracting tags based on the clusterization idea
     """
 
-    def __init__(self) -> None:
+    def __init__(self, ft_emb_model) -> None:
         self.normalizer = NormalizersPipe(
             [
                 PunctDeleter(),
@@ -21,8 +21,8 @@ class DBSCANFaissTagger(BaseExtractor):
             ],
             final_split=True,
         )
-        self.embedder = FastTextEmbedder()
-        self.faiss = FaissKeywordExtractor()
+        self.embedder = ft_emb_model
+        self.faiss = FaissKeywordExtractor(ft_emb_model)
 
     def extract(self, text: str, top_n: int) -> list:
         """
