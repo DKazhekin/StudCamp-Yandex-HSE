@@ -10,6 +10,12 @@
 
 ![Streamlit Demo](./materials/streamlit-Info-2024-04-30-15-04-49.gif)
 
+<h3 align='left'> *In order if you want to try out streamlit service. You need to clone the repo, activate poetry venv and run streamlit app with the code: </h3>
+
+```
+poetry run streamlit run Info.py
+```
+
 <h2>🧪 Preprocessing</h2>
 
 *   **Embedder Module:** FastText/RuBert embeddings realisation
