@@ -8,7 +8,7 @@
 
 <h2>🚀 Demo</h2>
 
-![Streamlit Demo](./materials/streamlit-Info-2024-04-30-15-04-49.gif)
+![Streamlit Demo](./materials/streamlit_demo.gif)
 
 <h3 align='left'> *In order if you want to try out streamlit service. You need to clone the repo, activate poetry venv and run streamlit app with the code: </h3>
 
